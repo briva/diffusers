@@ -198,7 +198,7 @@ def convert_text_enc_state_dict(text_enc_dict):
 if __name__ == "__main__":
 
     model_path = ""
-    checkpoint_path= "/home/briva/diffusers/examples/dreambooth"
+    checkpoint_path= "/home/briva/diffusers/examples/dreambooth/model.ckpt"
 
     unet_path = osp.join(model_path, "unet", "diffusion_pytorch_model.bin")
     vae_path = osp.join(model_path, "vae", "diffusion_pytorch_model.bin")
