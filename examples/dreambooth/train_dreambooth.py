@@ -295,6 +295,7 @@ class DreamBoothDataset(Dataset):
 
     def __getitem__(self, index):
         example = {}
+        print(self.num_instance_images)
         path = self.instance_images_path[index % self.num_instance_images]
         instance_image = Image.open(path)
         if not instance_image.mode == "RGB":
@@ -304,6 +305,7 @@ class DreamBoothDataset(Dataset):
         
         if self.image_captions_filename:
             filename = Path(path).stem
+            print(filename)
             pt=''.join([i for i in filename if not i.isdigit()])
             pt=pt.replace("_"," ")
             pt=pt.replace("(","")
